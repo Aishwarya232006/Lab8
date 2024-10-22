@@ -13,16 +13,15 @@ document.getElementById('stock-select').addEventListener('change', function () {
     const stockInfo = document.getElementById('stock-info');
     const spinner = document.getElementById('loading-spinner');
 
-    // Clear previous results
     stockInfo.innerHTML = '';
     alertBox.style.display = 'none';
 
     if (stockSymbol) {
-        spinner.style.display = 'block';  // Show loader
+        spinner.style.display = 'block'; 
         fetchStockData(stockSymbol, stockName);
     } else {
-        alertBox.style.display = 'block';  // Show alert if no stock selected
-        spinner.style.display = 'none';    // Hide loader
+        alertBox.style.display = 'block';  
+        spinner.style.display = 'none';    
     }
 });
 
@@ -40,7 +39,7 @@ async function fetchStockData(stockSymbol, stockName) {
     } catch (error) {
         console.error('Error fetching stock data:', error);
     } finally {
-        document.getElementById('loading-spinner').style.display = 'none'; // Hide loader when done
+        document.getElementById('loading-spinner').style.display = 'none';
     }
 }
 
@@ -49,12 +48,12 @@ function displayStockDetails(symbol, name, data) {
     const timeSeries = data["Time Series (5min)"];
     const metaData = data["Meta Data"];
     
-    // Extract the latest data point
+   
     const latestTimestamp = Object.keys(timeSeries)[0];
     const latestData = timeSeries[latestTimestamp];
     const formattedTimestamp = formatTimestamp(latestTimestamp);
 
-    // Display main card with stock symbol, name, last traded info, and volume
+   
     stockInfo.innerHTML = `
         <div class="card">
             <div class="card-body">
@@ -68,8 +67,8 @@ function displayStockDetails(symbol, name, data) {
         </div>
     `;
 
-    // Create cards for the last 10 data points (5-minute interval data)
-    const recentData = Object.entries(timeSeries).slice(0, 10); // Get last 10 intervals
+   
+    const recentData = Object.entries(timeSeries).slice(0, 10); 
     recentData.forEach(([timestamp, stockData]) => {
         stockInfo.innerHTML += `
             <div class="card">
@@ -99,6 +98,6 @@ function displayStockDetails(symbol, name, data) {
 }
 
 function formatTimestamp(timestamp) {
-    // Remove seconds from timestamp (e.g., '2024-10-18 19:55:00' => '2024-10-18 19:55')
+    
     return timestamp.slice(0, -3);
 }
