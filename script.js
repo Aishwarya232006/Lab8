@@ -3,7 +3,7 @@ const apiHost = 'alpha-vantage.p.rapidapi.com';
 
 document.addEventListener('DOMContentLoaded', function () {
     const alertBox = document.getElementById('select-alert');
-    alertBox.style.display = 'block';  // Show alert when page loads
+    alertBox.style.display = 'block'; 
 });
 
 document.getElementById('stock-select').addEventListener('change', function () {
@@ -13,15 +13,16 @@ document.getElementById('stock-select').addEventListener('change', function () {
     const stockInfo = document.getElementById('stock-info');
     const spinner = document.getElementById('loading-spinner');
 
+ 
     stockInfo.innerHTML = '';
     alertBox.style.display = 'none';
 
     if (stockSymbol) {
-        spinner.style.display = 'block'; 
+        spinner.style.display = 'block';  
         fetchStockData(stockSymbol, stockName);
     } else {
         alertBox.style.display = 'block';  
-        spinner.style.display = 'none';    
+        spinner.style.display = 'none'; 
     }
 });
 
@@ -39,7 +40,7 @@ async function fetchStockData(stockSymbol, stockName) {
     } catch (error) {
         console.error('Error fetching stock data:', error);
     } finally {
-        document.getElementById('loading-spinner').style.display = 'none';
+        document.getElementById('loading-spinner').style.display = 'none'; 
     }
 }
 
@@ -53,7 +54,7 @@ function displayStockDetails(symbol, name, data) {
     const latestData = timeSeries[latestTimestamp];
     const formattedTimestamp = formatTimestamp(latestTimestamp);
 
-   
+    
     stockInfo.innerHTML = `
         <div class="card">
             <div class="card-body">
@@ -98,6 +99,6 @@ function displayStockDetails(symbol, name, data) {
 }
 
 function formatTimestamp(timestamp) {
-    
+   
     return timestamp.slice(0, -3);
 }

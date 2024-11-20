@@ -1,5 +1,6 @@
 # Lab8
- First of all I created a webpage which shows us about the past 10 days details of given stocks here (from NASDAQ STOCKS). In a html file I write a code for this website, I added the inline css in this file also I added the BOOTSTRAP here as I was willing to learn it s well as I want to cut down my CSS code. 
+ 
+First of all I created a webpage which shows us about the past 10 days details of given stocks here (from NASDAQ STOCKS). In a html file I write a code for this website, I added the inline css in this file also I added the BOOTSTRAP here as I was willing to learn it s well as I want to cut down my CSS code. 
 For this I've tried to learn as much bootstrap as possible and then I imported the url and added it in my html file which makes my designing easier.
 Also as we know bootstrap makes a webpage responsive. So one reason was this as well.
 Then come the next part where I chose the RapidAPI itself for fetching and showing the data. 
@@ -20,4 +21,4 @@ For example: I included a loader once you select a stock so , that when its goin
  Also I searched for few things like for including a "GRAPH" just for a better layout designing.
  And I took help from the class notes as well.
  Overall this assignment according to me was all I can do from this much knowledge and I know it took me so long but at least I learned a lot of new things while making this assignment.
-
+By clicking on the button of the graph you can make it disappear also it shows the peak points if you hover over those points you came to see some highest and lowest prices along with the month.
