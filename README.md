@@ -18,7 +18,8 @@ For example: I included a loader once you select a stock so , that when its goin
  Also at the starting page you can see I included an alert command which tells you to select a stock if you haven't.
  I added several cards at the front page too which tell you that in which format you are going to see the data.
  I also give my code to AI tool several times whenever I felt like I got stuck here or I need to modify it or I'm facing some issues. And it helped me too as I prompted my difficulties on it and it suggested me several changes.
- Also I searched for few things like for including a "GRAPH" just for a better layout designing.
+ Also I searched for few things like for including a "GRAPH" just for a better layout designing.By clicking on the button of the graph you can make it disappear also it shows the peak points if you hover over those points you came to see some highest and lowest prices along with the months.The graph shows you the price variations between Jan to Jul.
+
  And I took help from the class notes as well.
  Overall this assignment according to me was all I can do from this much knowledge and I know it took me so long but at least I learned a lot of new things while making this assignment.
 By clicking on the button of the graph you can make it disappear also it shows the peak points if you hover over those points you came to see some highest and lowest prices along with the month.
